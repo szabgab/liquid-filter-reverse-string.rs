@@ -1,4 +1,6 @@
-use liquid_core::{Result, Value, ValueView, Filter, Runtime, Display_filter, ParseFilter, FilterReflection};
+use liquid_core::{
+    Display_filter, Filter, FilterReflection, ParseFilter, Result, Runtime, Value, ValueView,
+};
 
 #[derive(Clone, ParseFilter, FilterReflection)]
 #[filter(
@@ -7,7 +9,6 @@ use liquid_core::{Result, Value, ValueView, Filter, Runtime, Display_filter, Par
     parsed(ReverseStrFilter)
 )]
 pub struct ReverseStr;
-
 
 #[derive(Debug, Default, Display_filter)]
 #[name = "reversestr"]
@@ -20,7 +21,6 @@ impl Filter for ReverseStrFilter {
         Ok(Value::scalar(reversed.to_string()))
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -42,4 +42,3 @@ mod tests {
         assert_eq!(output, "!olleH".to_string());
     }
 }
-
