@@ -2,6 +2,12 @@
 name = "liquid-filter-reverse-string"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Filter for the liquid template engine to reverse a string."
+keywords = ["template", "templating", "liquid"]
+categories = ["template-engine"]
+readme = "README.md"
+repository = "https://github.com/szabgab/liquid-filter-reverse-string.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
